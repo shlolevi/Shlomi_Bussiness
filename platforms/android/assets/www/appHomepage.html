@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="initial-scale=1; maximum-scale=1; minimum-scale=1;" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/all.css">
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/fancybox.css" />
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/main.css" />
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/jquery.jqplot.min.css" />
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/styles.css" />
+	<link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/mobile.css" />
+    <link rel="stylesheet" href="https://service.isracard.co.il/newSupplier/mobileSite/css/jquery-ui.css">
+</head>
+<body ontouchstart>
+    <div class="containerWrapper" id="containerWrapper">
+
+        <nav class="mobile-menu clearfix" id="slidingMenu">
+            <div class="topNav"><span id="suppHeader"></span></div>
+
+            <ul class="mainMenu" id="accordion">
+                
+            </ul>
+        </nav>
+
+        <div class="viewWrapper" id="viewWrapper">
+            <div class="viewContent">
+
+                <div id="innerContent">
+                  <header class="appHeader" id="mainHeader">                  
+                        <a id="appback" href="javascript:isHomePage();" class="btnBack">חזור</a>
+						<a href="javascript:backToHomepage();" class="navbar-brand">
+                            <img alt="" src="https://service.isracard.co.il/newSupplier/mobileSite/images/brand.png" />
+                        </a>
+                        <a class="navbar-toggle" id="menuBtn" href="javascript:void(0);">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        
+            ;        </header>
+
+                    <article class="mainContent" id="mainContent">
+                        
+                    </article>
+                </div>
+
+                <div class="mobile-menu-modal"></div>
+            </div>
+        </div>
+    </div>
+
+	<div id="waitPopup" class="waitContainer" style="display:block;position: absolute;top:40%">
+		<img src="https://service.isracard.co.il/newSupplier/mobileSite/images/ajax-loader.gif" alt="" class="center"/>
+	</div>
+    
+    <button id="btnSession" class="btn btn-default" data-toggle="modal" data-target="#sessionBox" style="display:none"></button>
+	    <div class="modal" id="sessionBox" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!----></button>
+                    <h4 class="modal-title iconAttention" id="myModalLabel">אי שימוש באתר</h4>
+                </div>
+                <div class="modal-body">
+                    <p>האם אתה מעוניין להישאר באתר?</p>
+                </div>
+                <div class="btnLine row">
+                    <div class="col-xs-6">
+                        <button id="getOut" title="" class="btn back" data-dismiss="modal">לא</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button id="continue" title="" class="btn blueBG" data-dismiss="modal">כן</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------------------------------------------------------------------------->     
+    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
+    <script>window.jQuery || document.write('<script src="https://service.isracard.co.il/newSupplier/mobileSite/js/jquery-1.8.3.min.js"><\/script>')</script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/scripts.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/functions.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/jquery.history.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/bootstrap.min.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/plugins.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/jquery.jqplot.min.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/jqplot.donutRenderer.min.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/chart.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/jquery.main.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/parsley.min.js"></script>   
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/handlebars.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/jquery.wakeup.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/jquery-ui.min.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/datepicker-he.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/mobileFramework.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/mobileModules.js"></script>
+    <script src="https://service.isracard.co.il/newSupplier/mobileSite/js/mobileModules2.js"></script> 
+    <script src="cordova.js"></script>
+    
+    <script>
+        BASE_SERVER = "https://service.isracard.co.il";
+		
+							
+		function onDeviceReady() {
+		    document.addEventListener("backbutton", onBackKeyDown, false);
+            BASE_SERVER = "https://service.isracard.co.il";
+		}
+		
+        function onBackKeyDown() {	
+		     var curPage = window.location.href;		
+		     //retrieve the previous page
+		     var previouspage = window.sessionStorage.getItem("page");
+			if(previouspage == undefined || curPage.indexOf("login.html") != -1){		
+			
+				navigator.notification.confirm(
+		           'האם ברצונך לצאת ?', // message
+		            onConfirm,            // callback to invoke with index of button pressed
+		           'מערכת',           // title
+		           'להישאר,לצאת'         // buttonLabels
+		       );					 				
+			}
+		}
+		
+			function onConfirm(buttonIndex) {
+		      // alert('You selected button ' + buttonIndex);
+		       if(buttonIndex == 2)
+		       	navigator.app.exitApp();
+		   }
+
+		
+		$(document).ready(function(){
+			document.addEventListener("deviceready", onDeviceReady, false);
+		});
+        
+        SuppDashboard_2010.show();
+        SessionManager.start();
+        
+        function performExit(){
+            $.ajax({
+                   url: BASE_SERVER + BASE_URL + 'SuppPerformExit',
+                   dataType: 'json',
+                   async: false,
+                   cache : false,
+                   success:function(dataBean) {
+                   if(dataBean){
+                   document.location.href = 'appLogin.html?type=app';
+                   }
+                   }
+            });
+                   
+        }
+		
+		
+		spinnerplugin.show({
+		    overlay: true,    // defaults to true
+		    timeout: 10,       // defaults to 0 (no timeout)
+		    fullscreen: true,  // defaults to false
+		});	
+								
+	</script>
+	
+</body>
+</html>
