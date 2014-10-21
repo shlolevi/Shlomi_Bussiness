@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F5CFFF29-9C87-4C9B-9A48-C5FA3D1283D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Isracard_Bussiness</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5B2588F4867EB1373142820F48B3C14B701FF887</key>
+		<string>https://github.com/shlolevi/Shlomi_Bussiness.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Isracard_Bussiness/platforms/ios/Isracard_Bussiness.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5B2588F4867EB1373142820F48B3C14B701FF887</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/shlolevi/Shlomi_Bussiness.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5B2588F4867EB1373142820F48B3C14B701FF887</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5B2588F4867EB1373142820F48B3C14B701FF887</string>
+			<key>IDESourceControlWCCName</key>
+			<string>testGit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
